@@ -11,6 +11,7 @@ class Burnout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'BebasNeue'),
       home: const SplashPage(),
     );
