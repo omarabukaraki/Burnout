@@ -1,5 +1,6 @@
 import 'package:burnout/core/utils/app_color.dart';
 import 'package:burnout/core/widgets/application_logo.dart';
+import 'package:burnout/home_page.dart';
 import 'package:flutter/material.dart';
 
 import 'widget/auth_text_filed.dart';
@@ -97,7 +98,16 @@ class _AuthPageState extends State<AuthPage> {
                     ),
                     const VerticalSpace(height: 8),
                     isLogin == true
-                        ? const CustomAuthButton(labelOFButton: 'Login')
+                        ? CustomAuthButton(
+                            labelOFButton: 'Login',
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (context) {
+                                  return const HomePage();
+                                },
+                              ));
+                            },
+                          )
                         : const CustomAuthButton(labelOFButton: 'SignUp'),
                     const VerticalSpace(height: 8),
                   ]),
