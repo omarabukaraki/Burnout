@@ -9,24 +9,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: AppColor.kWhite,
-      child: SafeArea(
+      child: const SafeArea(
         child: Scaffold(
-          body: Column(
-            children: [
-              const CustomFullAppBar(),
-              Expanded(
-                child: Container(
-                  color: Colors.white,
-                  child: ListView.builder(
-                    itemBuilder: (context, index) {
-                      return ElevatedButton(
-                          onPressed: () {}, child: Text('omar'));
-                    },
-                  ),
-                ),
-              )
-            ],
-          ),
+          body: AllPages(),
         ),
       ),
     );

@@ -1,40 +1,94 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../core/utils/app_color.dart';
-import 'icon_list.dart';
-import 'pages_button_list.dart';
+import 'custom_app_bar.dart';
+import 'pages_button.dart';
 
-class CustomFullAppBar extends StatelessWidget {
-  const CustomFullAppBar({
+class AllPages extends StatefulWidget {
+  const AllPages({
     super.key,
   });
 
   @override
+  State<AllPages> createState() => _AllPagesState();
+}
+
+class _AllPagesState extends State<AllPages> {
+  bool isSelectOne = true;
+  bool isSelectTwo = false;
+  bool isSelectThree = false;
+  int index = 0;
+  List<Widget> pages = [
+    Container(
+      color: Colors.green,
+    ),
+    Container(
+      color: Colors.amber,
+    ),
+    Container(
+      color: Colors.black,
+    )
+  ];
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height / 4,
-      decoration: const BoxDecoration(
-          color: Colors.red,
-          border: Border(bottom: BorderSide(color: AppColor.kPrimary))),
-      child: const Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+    return Column(
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height / 4,
+          decoration: const BoxDecoration(
+              border: Border(bottom: BorderSide(color: AppColor.kPrimary))),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                IconList(),
-                SizedBox(height: 20),
-                Text(
-                  'Burnout',
-                  style: TextStyle(color: AppColor.kPrimary, fontSize: 48),
-                ),
-                SizedBox(height: 20),
-              ],
-            ),
-            PagesButtonList()
-          ]),
+                const CustomAppBar(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    PagesButton(
+                      isSelected: isSelectOne,
+                      label: 'For You',
+                      onTap: () {
+                        setState(() {
+                          isSelectOne = true;
+                          isSelectTwo = false;
+                          isSelectThree = false;
+                          index = 0;
+                        });
+                      },
+                    ),
+                    PagesButton(
+                      isSelected: isSelectTwo,
+                      label: 'WorkOut',
+                      onTap: () {
+                        setState(() {
+                          isSelectOne = false;
+                          isSelectTwo = true;
+                          isSelectThree = false;
+                          index = 1;
+                        });
+                      },
+                    ),
+                    PagesButton(
+                      isSelected: isSelectThree,
+                      label: 'MyPlan',
+                      onTap: () {
+                        setState(() {
+                          isSelectOne = false;
+                          isSelectTwo = false;
+                          isSelectThree = true;
+                          index = 2;
+                        });
+                      },
+                    ),
+                  ],
+                )
+              ]),
+        ),
+        Expanded(
+          child: pages[index],
+        )
+      ],
     );
   }
 }
