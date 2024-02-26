@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_color.dart';
-import '../pages/for_you_page.dart';
+import '../../../../for_you/presentation/view/for_you_page.dart';
 import '../../../../my_plan/presenation/view/my_plan_page.dart';
 import '../../../../work_out/presentation/view/work_out_page.dart';
 import 'custom_app_bar.dart';

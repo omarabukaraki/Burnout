@@ -2,8 +2,8 @@ import 'package:burnout/core/utils/app_assets.dart';
 import 'package:burnout/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
-import '../widget/card_widget/custom_card.dart';
-import '../widget/card_widget/custom_collection_card.dart';
+import '../widget/custom_card.dart';
+import '../widget/custom_collection_card.dart';
 
 class ForYouPage extends StatelessWidget {
   const ForYouPage({super.key});
