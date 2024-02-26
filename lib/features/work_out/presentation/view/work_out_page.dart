@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widget/custom_search_bar.dart';
-import '../widget/custom_work_out_card.dart';
+import 'widget/custom_search_bar.dart';
+import 'widget/custom_work_out_card.dart';
 
 class WorkOutPage extends StatefulWidget {
   const WorkOutPage({super.key});
