@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_color.dart';
+import '../pages/for_you_page.dart';
+import '../pages/my_plan_page.dart';
+import '../pages/work_out_page.dart';
 import 'custom_app_bar.dart';
 import 'pages_button.dart';
 
@@ -17,17 +20,7 @@ class _AllPagesState extends State<AllPages> {
   bool isSelectTwo = false;
   bool isSelectThree = false;
   int index = 0;
-  List<Widget> pages = [
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.amber,
-    ),
-    Container(
-      color: Colors.black,
-    )
-  ];
+  List<Widget> pages = const [ForYouPage(), WorkOutPage(), MyPlanPage()];
   @override
   Widget build(BuildContext context) {
     return Column(
