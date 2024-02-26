@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_color.dart';
 import '../pages/for_you_page.dart';
 import '../pages/my_plan_page.dart';
-import '../pages/work_out_page.dart';
+import '../../../../work_out/presentation/view/work_out_page.dart';
 import 'custom_app_bar.dart';
 import 'pages_button.dart';
 
@@ -30,7 +30,7 @@ class _AllPagesState extends State<AllPages> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height / 4,
           decoration: const BoxDecoration(
-              border: Border(bottom: BorderSide(color: AppColor.kPrimary))),
+              border: Border(bottom: BorderSide(color: AppColor.kSecondary))),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
