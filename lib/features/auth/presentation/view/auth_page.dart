@@ -1,6 +1,6 @@
 import 'package:burnout/core/utils/app_color.dart';
 import 'package:burnout/core/widgets/application_logo.dart';
-import 'package:burnout/features/home/presentation/views/home_page.dart';
+import 'package:burnout/features/hidden_drawer/presentation/view/hidden_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'widget/auth_text_filed.dart';
@@ -103,7 +103,7 @@ class _AuthPageState extends State<AuthPage> {
                             onTap: () {
                               Navigator.push(context, MaterialPageRoute(
                                 builder: (context) {
-                                  return const HomePage();
+                                  return const HiddenDrawer();
                                 },
                               ));
                             },

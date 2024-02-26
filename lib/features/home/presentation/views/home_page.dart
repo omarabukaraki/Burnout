@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
       color: AppColor.kWhite,
       child: const SafeArea(
         child: Scaffold(
+          backgroundColor: AppColor.kWhite,
           body: AllPages(),
         ),
       ),

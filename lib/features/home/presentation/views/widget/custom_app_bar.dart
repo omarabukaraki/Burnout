@@ -1,6 +1,5 @@
 import 'package:burnout/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
-import 'icon_list.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
@@ -9,16 +8,12 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return const Row(
       children: [
-        IconList(),
-        SizedBox(height: 20),
         Text(
           'Burnout',
           style: TextStyle(color: AppColor.kPrimary, fontSize: 48),
         ),
-        SizedBox(height: 20),
       ],
     );
   }
