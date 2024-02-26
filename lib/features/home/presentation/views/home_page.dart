@@ -1,6 +1,6 @@
 import 'package:burnout/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
-import 'widget/custom_full_app_bar.dart';
+import 'widget/all_pages.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
